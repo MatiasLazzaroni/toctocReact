@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="33" viewBox="0 0 200 33">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+
+      .cls-4 {
+        filter: url(#filter-4);
+      }
+
+      .cls-5 {
+        filter: url(#filter-5);
+      }
+
+      .cls-6 {
+        filter: url(#filter-6);
+      }
+
+      .cls-7 {
+        filter: url(#filter-7);
+      }
+
+      .cls-8 {
+        filter: url(#filter-8);
+      }
+    </style>
+    <filter id="filter" x="14.656" y="1.375" width="28.344" height="30.219" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#f5f5f5"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="41.75" y="1.375" width="24.656" height="30.219" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#f5f5f5"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="48.531" y="6.781" width="10.844" height="18.656" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#121212"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="70.094" y="1.375" width="24.656" height="30.25" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#f5f5f5"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-5" x="105.25" y="1.375" width="28.344" height="30.219" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#f5f5f5"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-6" x="132.344" y="1.375" width="24.656" height="30.219" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#f5f5f5"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-7" x="139.125" y="6.781" width="10.844" height="18.656" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#121212"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-8" x="160.688" y="1.375" width="24.656" height="30.25" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#f5f5f5"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Rectángulo_1" data-name="Rectángulo 1" class="cls-1" d="M15.26,1.387H42.992l-1.239,6.09S29.9,7.587,28.818,7.55c-0.2,1.668.507,2.208,2.465,2.465-0.1.514-3.7,21.57-3.7,21.57H20.806L24.5,7.55h-9.86Z"/>
+  <path id="Rectángulo_2" data-name="Rectángulo 2" class="cls-2" d="M53.469,1.387a52.639,52.639,0,0,0,6.163,0c5,1.1,5.708,2.732,6.779,5.547,0,0-1.067,14.245-3.081,17.872-1.31,3.426-6.222,6.275-9.244,6.779-1.108,0-4.173-.151-4.93,0-1.968,0-6.925-2.791-7.4-6.779,0.115-3.961,1.69-14.179,2.444-16.113C44.619,5.442,49.738,1.171,53.469,1.387Z"/>
+  <path id="Rectángulo_3" data-name="Rectángulo 3" class="cls-3" d="M52.853,7.55a6.237,6.237,0,0,1,4.314-.616,2.384,2.384,0,0,1,2.2,2.545,141.821,141.821,0,0,1-2.2,14.095A3.137,3.137,0,0,1,54.7,25.422c-0.517.047-3.844,0-4.314,0a2.957,2.957,0,0,1-1.849-3.081A114.524,114.524,0,0,1,51,10.015,4.165,4.165,0,0,1,52.853,7.55Z"/>
+  <path id="Rectángulo_4" data-name="Rectángulo 4" class="cls-4" d="M72.574,8.782c0.4-2.446,4.838-7.4,9.244-7.4H88.6c3.94,0.154,6.3,4.273,6.163,6.163a33,33,0,0,1-1.36,7.194c-1.2.386-5.489,0.008-6.652,0.2,0.438-1.228,1.391-4.506.616-6.163-0.512-2.047-5.694-2.348-7.4,0-1.4,3.031-3.642,13.773-2.465,15.407,0.679,1.906,5.987,1.764,6.779,0a6.822,6.822,0,0,0,1.233-3.081c1.365,0,6.8-.079,6.779,0-0.564,3-.34,9.6-9.861,10.477-3.142-.1-2.469.093-5.546,0-2.824-.085-6.381-2.712-6.779-4.93C69.938,24.436,71.493,10.716,72.574,8.782Z"/>
+  <path id="Rectángulo_1_copia" data-name="Rectángulo 1 copia" class="cls-5" d="M105.853,1.387h27.733l-1.239,6.09s-11.855.11-12.936,0.072c-0.2,1.668.507,2.208,2.465,2.465-0.1.514-3.7,21.57-3.7,21.57H111.4L115.1,7.55h-9.86Z"/>
+  <path id="Rectángulo_2_copia" data-name="Rectángulo 2 copia" class="cls-6" d="M144.062,1.387a52.642,52.642,0,0,0,6.163,0c5,1.1,5.708,2.732,6.779,5.547,0,0-1.066,14.245-3.081,17.872-1.31,3.426-6.222,6.275-9.244,6.779-1.108,0-4.174-.151-4.931,0-1.967,0-6.924-2.791-7.395-6.779,0.115-3.961,1.69-14.179,2.444-16.113C135.212,5.442,140.332,1.171,144.062,1.387Z"/>
+  <path id="Rectángulo_3_copia" data-name="Rectángulo 3 copia" class="cls-7" d="M143.446,7.55a6.237,6.237,0,0,1,4.314-.616,2.385,2.385,0,0,1,2.2,2.545,141.815,141.815,0,0,1-2.2,14.095,3.137,3.137,0,0,1-2.465,1.849c-0.517.047-3.844,0-4.314,0a2.957,2.957,0,0,1-1.849-3.081A114.719,114.719,0,0,1,141.6,10.015,4.168,4.168,0,0,1,143.446,7.55Z"/>
+  <path id="Rectángulo_4_copia" data-name="Rectángulo 4 copia" class="cls-8" d="M163.167,8.782c0.4-2.446,4.839-7.4,9.244-7.4h6.779c3.94,0.154,6.3,4.273,6.163,6.163a32.926,32.926,0,0,1-1.36,7.194c-1.2.386-5.489,0.008-6.651,0.2,0.437-1.228,1.39-4.506.616-6.163-0.512-2.047-5.694-2.348-7.4,0-1.4,3.031-3.642,13.773-2.465,15.407,0.679,1.906,5.987,1.764,6.779,0a6.82,6.82,0,0,0,1.233-3.081c1.365,0,6.8-.079,6.779,0-0.564,3-.34,9.6-9.86,10.477-3.143-.1-2.469.093-5.547,0-2.824-.085-6.381-2.712-6.779-4.93C160.531,24.436,162.086,10.716,163.167,8.782Z"/>
+</svg>
