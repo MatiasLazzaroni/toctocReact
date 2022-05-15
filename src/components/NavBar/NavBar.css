@@ -10,7 +10,7 @@
 nav ul{
     display: flex;    
     list-style: none;
-    margin-right: 150px;
+    margin-right: 0px;
 }
 nav ul li{           
     text-decoration: none;
@@ -22,6 +22,17 @@ nav ul li{
 
 .logoToc{
     display: flex;    
-    margin-left: 150px;
+    margin-left: 50px;
 
+}
+
+.iconoCarro{
+    display: flex;
+    margin-right: 50px;
+    cursor: pointer;   
+}
+
+.numero{
+    margin-left: 8px;
+    color: whitesmoke;
 }
