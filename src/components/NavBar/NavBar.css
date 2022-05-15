@@ -1,19 +1,27 @@
-nav {
+.menu {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
     background-color:#121212;
     margin: 20px 100px;
     border-radius: 10px;
 }
-ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+nav ul{
+    display: flex;    
     list-style: none;
+    margin-right: 150px;
 }
-li{
-    padding-left: 40px;
+nav ul li{           
     text-decoration: none;
     color: whitesmoke;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+
+.logoToc{
+    display: flex;    
+    margin-left: 150px;
+
 }
