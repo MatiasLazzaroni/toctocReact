@@ -1,0 +1,33 @@
+.tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardContenedor{
+   
+    display: grid;
+    grid-template-columns: 330px;
+    grid-template-rows: 210px 150px 100px 100px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    text-align: center;
+    margin:20px;
+}
+
+.cardTexto{
+    color: grey;
+    
+}
+.cardTexto h2{
+    color: black;
+   
+}
+.descripcion{
+    padding: 15px;
+}
+.precio{
+    font-size: 30px;
+    color: black;
+}

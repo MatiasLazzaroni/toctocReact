@@ -1,0 +1,60 @@
+
+.cardBoton{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #f7333f;
+    cursor: pointer;    
+}
+
+.signo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0px;
+    color: white;
+    font-size: 30px;
+    border-right: 1px solid white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.signo2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0px;
+    color: white;
+    font-size: 30px;
+    border-left: 1px solid white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.cardBoton p {
+    color: white;
+}
+.agregarCarrito{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.contador{
+    font-size: 20px;
+    margin: 0px;
+}
+.texto{
+    font-size: 15px;
+   margin: 0px;
+}

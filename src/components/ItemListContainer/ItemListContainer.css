@@ -1,0 +1,15 @@
+.listaDeProductos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+}
+.titulo{
+    font-size: 50px;
+}
+h4{
+    padding: 0px 100px;
+    color: gray;
+    margin-bottom: 50px;
+}
