@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import promesa from '../../herramientas/Promesa'
+import promesa from '../../herramientas/asyncMock'
 import productos from '../Productos/productos'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
