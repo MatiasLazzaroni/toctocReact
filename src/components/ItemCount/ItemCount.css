@@ -45,9 +45,7 @@
     background: #b3262f;
     border-bottom-right-radius: 15px;
 }
-.cardBoton p {
-    color: white;
-}
+
 .agregarCarrito{
     display: flex;
     flex-direction: column; 
@@ -58,11 +56,17 @@
     -ms-user-select: none;
     user-select: none; 
 }
+.agregarCarrito:active{
+    background: #b3262f;
+}
 .contador{
     font-size: 20px;
     margin: 0px;
+    color: white;
 }
+
 .texto{
     font-size: 15px;
-   margin: 0px;
+    margin: 0px;
+    color: white;
 }
