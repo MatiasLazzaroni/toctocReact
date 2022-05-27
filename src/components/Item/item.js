@@ -14,7 +14,7 @@ function Item ({imagen, subtitulo, nombre, descripcion, precio, id, stock}) {
                 </div>
                 <p className='descripcion'>{descripcion} </p> 
                 <p className='precio'>{precio}</p>
-                <ItemCount stock={stock}/>                
+                <ItemCount stock={stock} initial={0}/>                
             </div>
         </div>
     )

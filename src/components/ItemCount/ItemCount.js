@@ -1,9 +1,9 @@
 import './ItemCount.css'
 import {useState} from 'react'
 
-function ItemCount ({stock}) {
+function ItemCount ({stock, initial}) {
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(initial);
 
     function sumar () {
         if(count < stock) {
@@ -18,7 +18,7 @@ function ItemCount ({stock}) {
     }
 
     function onAdd () {
-        alert("agregado al carro")
+        alert("Se agregaron " + count + " productos al carro")
     }
 
     return(        

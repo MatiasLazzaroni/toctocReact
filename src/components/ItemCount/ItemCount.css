@@ -21,11 +21,13 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; 
+    user-select: none;
+    font-size: 35px;
 }
 .signo:active{
     background: #b3262f;
     border-bottom-left-radius: 15px;
+    font-size: 45px;
 }
 .signo2{
     display: flex;
@@ -44,6 +46,7 @@
 .signo2:active{
     background: #b3262f;
     border-bottom-right-radius: 15px;
+    font-size: 35px;
 }
 
 .agregarCarrito{
