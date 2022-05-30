@@ -1,0 +1,47 @@
+.tarjetaDetalle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detalleContenedor{
+    display: grid;
+    grid-template-columns: 600px 300px;
+    grid-template-rows: 500px 70px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+}
+.contador{
+    grid-column:2/3;
+}
+.descripcion{
+    padding: 0px;
+}
+.precio{
+    font-size: 40px;
+    color: black;
+    margin: 0px 0px 30px 0px;
+  
+}
+.textoDetalle{
+   
+    padding: 20px;
+    border-left: 2px solid grey;
+    
+}
+.textoDetalle h2{
+    color: black;
+   
+}
+.textoEnvio{
+    border-radius: 15px;
+    margin: 0px;
+    padding: 5px;
+}
+.envio{
+    color: green;
+    padding: 0px;
+    margin: 0px;
+}
+.logosTarjetas{
+    display: flex;
+}

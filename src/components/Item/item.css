@@ -7,7 +7,7 @@
    
     display: grid;
     grid-template-columns: 330px;
-    grid-template-rows: 210px 150px 100px 100px;
+    grid-template-rows: 210px 150px 100px;
     border-bottom-right-radius: 18px;
     border-bottom-left-radius: 18px;
     background-color: white;
@@ -22,12 +22,21 @@
 }
 .cardTexto h2{
     color: black;
-   
 }
-.descripcion{
-    padding: 15px;
+.btnDetalle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
-.precio{
-    font-size: 30px;
-    color: black;
+.btnDetalle div{
+     color: white;
+     background-color: #f7333f;
+    border-radius: 10px;
+    padding: 10px;   
+    width: 80px;
+}
+
+a{
+    text-decoration: none;
 }

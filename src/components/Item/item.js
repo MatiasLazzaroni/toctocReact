@@ -1,20 +1,26 @@
 import './item.css'
-import ItemCount from '../ItemCount/ItemCount'
 
-function Item ({imagen, subtitulo, nombre, descripcion, precio, id, stock}) {
+import {Link} from 'react-router-dom'
+
+function Item ({imagen, subtitulo, nombre, id}) {
 
     return(
-        <div className="tarjeta">
+        <div className="tarjeta" >
             <div className='cardContenedor'>
-                <div className='cardImg'><img src={imagen} alt="imagenes de productos"></img></div>
-                <div className='cardTexto'>
-                    <p>{id}</p>
-                    <p> {subtitulo}</p>
-                    <h2>{nombre}</h2>                                       
+                <div>
+                    <img src={imagen} alt="imagenes de productos"></img>
                 </div>
-                <p className='descripcion'>{descripcion} </p> 
-                <p className='precio'>{precio}</p>
-                <ItemCount stock={stock} initial={0}/>                
+                <div className='cardTexto'>
+                    <p key={id}></p>
+                    <p> {subtitulo}</p>
+                    <h2>{nombre}</h2>
+                                                  
+                </div>
+                <Link to={`/detalles/${id}`}>
+                    <div className='btnDetalle'>
+                        <div>DETALLES</div>
+                    </div>
+                </Link>          
             </div>
         </div>
     )

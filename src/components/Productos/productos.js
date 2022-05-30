@@ -1,6 +1,6 @@
 const productos = [
     {
-        id: 1,
+        id: "1",
         imagen: './images/mueble.jpg',
         subtitulo: "MUEBLES MELAMINA",
         nombre: "MODULAR MESA TV BIBLIOTECA",
@@ -9,7 +9,7 @@ const productos = [
         stock:8
     },
     {
-        id: 2,
+        id: "2",
         imagen: './images/mesaRatona.jpg',
         subtitulo:"MODELO LUNA DISEÑO MODERNO",
         nombre: "MESA RATONA ELEVABLE",
@@ -18,7 +18,7 @@ const productos = [
         stock:10
     },
     {
-        id: 3,
+        id: "3",
         imagen: './images/placard.jpg',
         subtitulo: "MUEBLES MODELO 2002",
         nombre: "PLACARD ROPERO",
@@ -27,7 +27,7 @@ const productos = [
         stock: 15
     },
     {
-        id: 4,
+        id: "4",
         imagen: './images/biblioteca.jpg',
         subtitulo: "MODELO TOKIO",
         nombre: "BIBLIOTECA ENCHAPADO PARAISO",

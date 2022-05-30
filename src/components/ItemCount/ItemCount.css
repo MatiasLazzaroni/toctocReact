@@ -3,8 +3,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 70px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    
+    
     background: #f7333f;
     cursor: pointer;    
 }
