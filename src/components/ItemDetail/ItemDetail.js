@@ -7,7 +7,7 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre}) => 
   return (   
     <div className="tarjetaDetalle">
             <div className='detalleContenedor'>
-                <div>
+                <div className='imagenProd'>
                     <img src={imagen} alt="imagenes de productos"></img>
                 </div>
         
@@ -21,10 +21,10 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre}) => 
                     
                     <p className='precio'>{precio}</p>
                     <div className='logosTarjetas'>
-                    <img src='./images/visa.svg' alt='Icono Tarjeta'></img>
-                    <img src='./images/Naranja.svg' alt='Icono Tarjeta'></img>
-                    <img src='./images/American.svg' alt='Icono Tarjeta'></img>
-                    <img src='./images/MasterCard.svg' alt='Icono Tarjeta'></img>
+                    <img className='logosTC' src={require('../../images/VISA.png')} alt='Icono Tarjeta'></img>
+                    <img className='logosTC'  src={require('../../images/naranja.png')} alt='Icono Tarjeta'></img>
+                    <img className='logosTC'  src={require('../../images/MasterCard.png')} alt='Icono Tarjeta'></img>
+                    <img className='logosTC'  src={require('../../images/American.png')} alt='Icono Tarjeta'></img>
 
                     </div>
                 </div>
