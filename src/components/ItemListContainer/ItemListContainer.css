@@ -13,3 +13,23 @@ h4{
     color: gray;
     margin-bottom: 50px;
 }
+.contenedorCategoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.iconoCategoria{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #f7333f;
+border-radius: 50px;
+width: 350px;
+height: 350px;
+margin: 20px;
+cursor: pointer;
+}
+.icono{
+    margin-right: 5px;
+}

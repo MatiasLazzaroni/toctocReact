@@ -1,0 +1,23 @@
+.tresPuntos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    
+}
+
+.punto{
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;   
+    margin-left: 5px;
+    animation: loader 1.2s ease infinite;
+
+}
+@keyframes loader{
+    0%{top: 0px ;}
+    50%{ width: 23px; height: 23px; background-color: #f7333f;}
+    100%{top: 0px; }
+}
+

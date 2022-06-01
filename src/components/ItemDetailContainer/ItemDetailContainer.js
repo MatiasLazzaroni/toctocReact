@@ -8,18 +8,29 @@ import productoId from '../../herramientas/asyncMock2'
 const ItemDetailContainer = () => {
     const[products, setProducts] = useState ()
     const {pId} = useParams ()
+    const[cargando, setCargando] = useState(true)
     
     useEffect (()=>{
-        productoId(pId).then(resultado => {setProducts(resultado)})
-    }, [])
+        productoId(pId).then(resultado => {setProducts(resultado)}).catch(error => {
+          alert (error)
+         }).finally(() => {setCargando(false)})
+    }, )
 
-    console.log(pId)
-    console.log(products)
+    if (cargando) {
+      return (
+        <div className='tresPuntos'>
+          <div className='punto'></div>
+          <div className='punto'></div>  
+          <div className='punto'></div>        
+        </div>
+      )    
+  }
+
   return (
-       <div> 
+       <div className='contenedor'> 
             <h1>Detalle del producto</h1>
             <ItemDetail {...products}/>
-        
+            
         </div>
   )
 }

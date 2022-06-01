@@ -6,6 +6,9 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 
 function App() {
+
+ 
+
   return (
     <div className="App">
       <header>
@@ -13,10 +16,11 @@ function App() {
         <BrowserRouter>
         <NavBar/>
           <Routes>
-            <Route path='/' element={<div className='logoToc'><img src={require('./images/logoToctoc.png')}></img></div>}/>
+            <Route path='/' element={<div className='logoToc'><img src={require('./images/logoToctoc.png')} alt="logo"></img></div>}/>
             <Route path='/productos' element={<ItemListContainer/>}/>
-            <Route path='*' element={<h1 className='ups'>¡Ups! Página no encontrada.</h1> }/>
+            <Route path='/categoria/:cId' element={<ItemListContainer/>}/>
             <Route path='/detalles/:pId' element={<ItemDetailContainer/>}/>
+            <Route path='*' element={<h1 className='ups'>¡Ups! Página no encontrada.</h1> }/>
           </Routes>
         </BrowserRouter>
       </header>

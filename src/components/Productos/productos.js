@@ -6,7 +6,8 @@ const productos = [
         nombre: "MODULAR MESA TV BIBLIOTECA",
         descripcion: "Este modular cuenta con una mesa de tv/led de 1.80m de largo capaz de cargar un Led de Hasta 42 pulgadas y un modular biblioteca cubo con 8 espacios.",
         precio: "$40.299",
-        stock:8
+        stock:8,
+        categoria: "living"
     },
     {
         id: "2",
@@ -15,7 +16,8 @@ const productos = [
         nombre: "MESA RATONA ELEVABLE",
         descripcion: "Ideal para espacios reducidos, un diseño moderno con material melamina de 18mm.",
         precio: "$16.999",
-        stock:10
+        stock:10,
+        categoria: "living"
     },
     {
         id: "3",
@@ -24,7 +26,8 @@ const productos = [
         nombre: "PLACARD ROPERO",
         descripcion: "Placard de Melamina de 18mm. Ideal para 2 personas.Su configuración de 12 cubos es ideal para el guardado de ropas.",
         precio: "$54.999",
-        stock: 15
+        stock: 15,
+        categoria: "habitaciones"
     },
     {
         id: "4",
@@ -33,7 +36,8 @@ const productos = [
         nombre: "BIBLIOTECA ENCHAPADO PARAISO",
         descripcion: "Biblioteca estilo moderno fabricada en Paraiso Laqueado Transparente semi mate. Enchapado Paraiso 18mm de Primera Calidad",
         precio: "$28.499",
-        stock:5
+        stock:5,
+        categoria: "habitaciones"
     },
 
 ]

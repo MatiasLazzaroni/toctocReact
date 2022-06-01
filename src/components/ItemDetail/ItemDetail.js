@@ -1,9 +1,12 @@
-import React from 'react'
+
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
 
 const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre}) => {
+
+  
+
   return (   
     <div className="tarjetaDetalle">
             <div className='detalleContenedor'>
