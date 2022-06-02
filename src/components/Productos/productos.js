@@ -27,7 +27,7 @@ const productos = [
         descripcion: "Placard de Melamina de 18mm. Ideal para 2 personas.Su configuración de 12 cubos es ideal para el guardado de ropas.",
         precio: "$54.999",
         stock: 15,
-        categoria: "habitaciones"
+        categoria: "habitacion"
     },
     {
         id: "4",
@@ -37,7 +37,7 @@ const productos = [
         descripcion: "Biblioteca estilo moderno fabricada en Paraiso Laqueado Transparente semi mate. Enchapado Paraiso 18mm de Primera Calidad",
         precio: "$28.499",
         stock:5,
-        categoria: "habitaciones"
+        categoria: "habitacion"
     },
 
 ]

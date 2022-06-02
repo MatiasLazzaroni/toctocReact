@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react'
 import promesa from '../../herramientas/asyncMock'
-import productoCategoria from '../../herramientas/asyncMock3'
 import productos from '../Productos/productos'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
@@ -13,19 +12,29 @@ function ItemListContainer () {
     const[cargando, setCargando] = useState(true)
     const {cId} = useParams ()
 
+console.log(cId)
     useEffect (()=>{
         setCargando(true)
-        
-        promesa(2000, productos)
-        .then(resultado => setItem(resultado)).catch(error => {
-         alert (error)
-        }).finally(() => {setCargando(false)})    
+        if(!cId){
+            promesa(2000, productos)
+            .then(resultado => setItem(resultado)).catch(error => {
+            alert (error)
+            })
+            .finally(() => {setCargando(false)})   
+        }
+        else{
+            promesa(2000, productos)
+            .then(resultado => setItem(resultado.filter (prod => prod.categoria === cId)))
+            .catch(error => {
+             alert (error)
+            })
+            .finally(() => {
+                setCargando(false)
+            })
+        }
  
-        /*productoCategoria(cId).then(resultado => setItem(resultado)).catch(error => {
-         alert (error)
-        }).finally(() => {setCargando(false)})}*/
 
-    }, [item])
+    }, [cId])
 
     if (cargando) {
         return (
@@ -50,8 +59,17 @@ function ItemListContainer () {
             </div>
             <h2 className='titulo'>Por categoria</h2>
             <div className='contenedorCategoria'>
-            <Link to={`/categoria/${cId}`}><div className='iconoCategoria'><img className='icono' src={require('../../images/iconoHabitacion.png')} alt='Icono'></img></div></Link>
-            <Link to={`/categoria/${cId}`}><div className='iconoCategoria'><img className='icono' src={require('../../images/IconoLiving.png')} alt='Icono'></img></div></Link>
+            
+            <Link to={`/categoria/habitacion`}>
+                <div className='iconoCategoria'>
+                    <img className='icono' src={require('../../images/iconoHabitacion.png')} alt='Icono'></img>
+                </div>
+            </Link>
+            <Link to={`/categoria/living`}>
+                <div className='iconoCategoria'>
+                    <img className='icono' src={require('../../images/IconoLiving.png')} alt='Icono'></img>
+                </div>
+            </Link>
             </div>
         </div>
     )
