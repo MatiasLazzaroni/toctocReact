@@ -54,3 +54,27 @@
     align-items: center;
     
 }
+.contenedorFinalizar{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 70px;
+    background: #f7333f;
+    cursor: pointer;    
+}
+.contenedorBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+}
+.finalizar1{
+    color: white;
+    font-size: 15px;
+}
+.finalizar2{
+    color: white;
+    font-size: 15px;
+        
+    
+    
+}

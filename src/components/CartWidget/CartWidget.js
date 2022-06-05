@@ -1,8 +1,18 @@
+import { useContext } from "react"
+import Context from '../../context/Context'
+import './CartWidget.css'
+
 const CartWidget = () => {
-    return (
+
+const {acumularCarro} = useContext(Context)
+
+const cantidad = acumularCarro()
+
+return (
         <div className='iconoCarro'>
             <img src='./images/IconoCarga.svg' alt='iconoCarga'></img>
-            <p className="numero">5</p>
+            <div className="circulo">{cantidad}</div>
+            
         </div>       
     )
 }

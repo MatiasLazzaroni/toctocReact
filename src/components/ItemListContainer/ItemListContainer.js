@@ -11,8 +11,7 @@ function ItemListContainer () {
     const[item, setItem] = useState ([])
     const[cargando, setCargando] = useState(true)
     const {cId} = useParams ()
-
-console.log(cId)
+   
     useEffect (()=>{
         setCargando(true)
         if(!cId){
@@ -57,6 +56,7 @@ console.log(cId)
             <div className='listaDeProductos'>
                 <ItemList productos={item}/>
             </div>
+
             <h2 className='titulo'>Por categoria</h2>
             <div className='contenedorCategoria'>
             
@@ -68,6 +68,16 @@ console.log(cId)
             <Link to={`/categoria/living`}>
                 <div className='iconoCategoria'>
                     <img className='icono' src={require('../../images/IconoLiving.png')} alt='Icono'></img>
+                </div>
+            </Link>
+            <Link to={`/categoria/cocina`}>
+                <div className='iconoCategoria'>
+                    <img className='icono' src={require('../../images/iconoCocina.png')} alt='Icono'></img>
+                </div>
+            </Link>
+            <Link to={`/categoria/oficina`}>
+                <div className='iconoCategoria'>
+                    <img className='icono' src={require('../../images/iconoOficina.png')} alt='Icono'></img>
                 </div>
             </Link>
             </div>

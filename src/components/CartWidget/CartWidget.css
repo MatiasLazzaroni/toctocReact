@@ -1,0 +1,9 @@
+
+.circulo{
+    background-color: #f7333f;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    color: whitesmoke;
+    font-size: 13px;
+}

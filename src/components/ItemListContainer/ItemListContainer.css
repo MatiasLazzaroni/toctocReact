@@ -1,8 +1,9 @@
 .listaDeProductos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 20px 40px;
 
 }
 .titulo{
@@ -21,15 +22,31 @@ h4{
 }
 .iconoCategoria{
 display: flex;
+flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 background-color: #f7333f;
 border-radius: 50px;
-width: 350px;
-height: 350px;
+width: 300px;
+height: 300px;
 margin: 20px;
+margin-bottom: 70px;
 cursor: pointer;
 }
 .icono{
     margin-right: 5px;
+}
+
+.btnVista{
+    display: flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    
+}
+.btn{
+     color: white;
+     background-color: #f7333f;
+    border-radius: 10px;
+    padding: 10px;   
+    width: 80px;
 }

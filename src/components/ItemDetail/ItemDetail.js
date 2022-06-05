@@ -1,11 +1,21 @@
-
+import { useState, useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
+import { Link } from 'react-router-dom';
+import Context from '../../context/Context';
 
 
-const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre}) => {
+const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre, id}) => {
+    const[quantity, setQuantity] = useState (0)
+   
+    const {agregarProd} = useContext(Context)
 
-  
+    function onAdd (quantity) {
+        setQuantity(quantity)
+        agregarProd({id, nombre, precio, quantity})
+    }
+
+   
 
   return (   
     <div className="tarjetaDetalle">
@@ -32,7 +42,18 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre}) => 
                     </div>
                 </div>
                 <div className='contador'>
-                    <ItemCount stock={stock} initial={0}/>
+                    { quantity > 0 
+                    ? <Link to='/carro'> <div className='contenedorFinalizar'>
+                                            <div className='contenedorBtn'>
+                                                <p className='finalizar1'>Finalizar</p>
+                                            </div>
+                                            <Link to='/productos' className='contenedorBtn'>
+                                                <p className='finalizar2'>Seguir comprando</p>                                               
+                                            </Link>
+                                        </div> 
+                    </Link> 
+                    : <ItemCount stock={stock} initial={1} agregar={onAdd}/>}
+                    
                 </div>
                 
             </div>

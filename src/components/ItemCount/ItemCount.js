@@ -1,32 +1,31 @@
 import './ItemCount.css'
 import {useState} from 'react'
 
-function ItemCount ({stock, initial}) {
 
-    const [count, setCount] = useState(initial);
-
-    function sumar () {
-        if(count < stock) {
-            setCount(count + 1)
+function ItemCount ({stock, initial, agregar}) {
+    
+    const [quantity, setQuantity] = useState(initial)
+  
+     function sumar () {
+        if(quantity < stock) {
+            setQuantity(quantity + 1)
         }
     }
 
     function restar () {
-        if(count > 0) {
-            setCount(count - 1)
+        if(quantity > 0) {
+            setQuantity(quantity - 1)
         }
     }
-
-    function onAdd () {
-        alert("Se agregaron " + count + " productos al carro")
-    }
-
+    
     return(        
         <div className='cardBoton' >
             <div className="signo" onClick={restar}>-</div>
             <div className='agregarCarrito'>
-                <p className='contador'>{count}</p>
-                <p className='texto' onClick={onAdd}>Agregar</p>
+                <div>
+                    <p className='contador'>{quantity}</p>
+                    <p className='texto' onClick={() => agregar(quantity)}>Agregar</p>
+                </div>
             </div>
             <div className="signo2" onClick={sumar}>+</div>
         </div>

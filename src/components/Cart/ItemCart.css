@@ -1,0 +1,32 @@
+.contenedorCarro{
+    display: flex;    
+    color: white;
+    margin: 15px 30px;
+}
+
+.carroContenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #31475e;
+    border-radius: 18px;
+    padding: 20px;
+    
+}
+.item{
+    margin-left: 10px;
+    text-align: center;
+}
+.btnContenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnBorrar{
+   color: white;
+   background-color: #f7333f;
+   border-radius: 10px;
+   padding: 10px;   
+   width: 50px;
+   cursor: pointer;
+}
