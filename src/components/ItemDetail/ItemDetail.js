@@ -9,11 +9,14 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre, id})
     const[quantity, setQuantity] = useState (0)
    
     const {agregarProd} = useContext(Context)
-
+   
     function onAdd (quantity) {
+       console.log("quantity ItemDetail "+quantity)
         setQuantity(quantity)
-        agregarProd({id, nombre, precio, quantity})
+        agregarProd({id, nombre, precio, quantity, stock})      
+            
     }
+
 
    
 
@@ -43,15 +46,18 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre, id})
                 </div>
                 <div className='contador'>
                     { quantity > 0 
-                    ? <Link to='/carro'> <div className='contenedorFinalizar'>
+                    ? <div>
+                        <Link to='/carro'> <div className='contenedorFinalizar'>
                                             <div className='contenedorBtn'>
                                                 <p className='finalizar1'>Finalizar</p>
                                             </div>
-                                            <Link to='/productos' className='contenedorBtn'>
-                                                <p className='finalizar2'>Seguir comprando</p>                                               
-                                            </Link>
+                                            
                                         </div> 
-                    </Link> 
+                        </Link> 
+                        
+                    </div>
+                   
+                    
                     : <ItemCount stock={stock} initial={1} agregar={onAdd}/>}
                     
                 </div>

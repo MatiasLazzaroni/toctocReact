@@ -17,6 +17,10 @@ function ItemCount ({stock, initial, agregar}) {
             setQuantity(quantity - 1)
         }
     }
+
+    function agregar2 () {
+        agregar(quantity)
+    }
     
     return(        
         <div className='cardBoton' >
@@ -24,7 +28,7 @@ function ItemCount ({stock, initial, agregar}) {
             <div className='agregarCarrito'>
                 <div>
                     <p className='contador'>{quantity}</p>
-                    <p className='texto' onClick={() => agregar(quantity)}>Agregar</p>
+                    <p className='texto' onClick={agregar2}>Agregar</p>
                 </div>
             </div>
             <div className="signo2" onClick={sumar}>+</div>

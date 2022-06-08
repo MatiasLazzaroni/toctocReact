@@ -11,9 +11,12 @@ const CartContainer = () => {
   return (
 
     <div className='carroContainer'>
+      <div className="btnLimpiar" onClick={borrarTodo}> <p className='limpiar'>Limpiar</p></div>
       <h1>Productos seleccionados</h1>
-      <ItemCart carro= {carro} borrar = {eliminarItem} />
-      <div className="btnBorrar" onClick={borrarTodo}> Limpiar</div>
+
+      { carro.map ( prod => <ItemCart {...prod} borrar = {eliminarItem} key= {prod.id} />)}
+
+      
     </div>
     
   )

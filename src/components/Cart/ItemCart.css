@@ -2,6 +2,7 @@
     display: flex;    
     color: white;
     margin: 15px 30px;
+    
 }
 
 .carroContenedor{
@@ -11,6 +12,7 @@
     background-color: #31475e;
     border-radius: 18px;
     padding: 20px;
+    
     
 }
 .item{
