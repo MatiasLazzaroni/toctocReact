@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import Context from '../../context/Context'
 import ItemCart from './ItemCart'
 import './CartContainer.css'
+import { Link } from 'react-router-dom';
 
 const CartContainer = () => {
 
@@ -16,6 +17,7 @@ const CartContainer = () => {
 
       { carro.map ( prod => <ItemCart {...prod} borrar = {eliminarItem} key= {prod.id} />)}
 
+      <Link to='/productos'><div className='btnSeguir'> <p className='textoVolver'>Volver</p></div></Link>
       
     </div>
     
