@@ -51,8 +51,17 @@ export const ContextToc = ({children}) => {
      
     }
 
+    const resultadoTotal = () => {
+      let total = 0
+      carro.forEach(prod => {
+          total += prod.quantity * prod.precio
+      })
+      
+      return total
+  }
+
     return (
-        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro }}>
+        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal }}>
             {children}
         </Context.Provider>
 

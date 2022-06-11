@@ -9,11 +9,11 @@ function ItemCart({borrar, nombre, quantity, precio, id}) {
     <div>
             <div className='contenedorCarro'>                
                     <div className="carroContenedor">
-                        <div className='item'>{nombre}</div>
-                        <div className='item'>Cantidad: {quantity}</div>
-                        <div className='item'>Precio: ${precio}</div>
-                        <div className='item'>Subtotal: ${precio * quantity}</div>
-                        <div onClick={()=> borrar (id)} className="btnContenedor"> <p className="btnBorrar">Borrar</p> </div>
+                        <div className='textoCarro'><p className='item'><b>{nombre}</b></p></div>
+                        <div className='textoCarro'><p className='item'><b>Cantidad: {quantity}</b></p></div>
+                        <div className='textoCarro'><p className='item'><b>Precio: ${precio}</b></p></div>
+                        <div className='textoCarro'><p className='item'><b>Subtotal: ${precio * quantity}</b></p></div>
+                        <div onClick={()=> borrar (id)} className="btnContenedor"> <img src={require('../../images/iconoBorrar.png')} alt="iconoBorrar" className="btnBorrar"></img> </div>
                     </div>                
             </div>         
     </div>

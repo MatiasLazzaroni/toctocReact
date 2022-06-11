@@ -7,3 +7,6 @@
     color: whitesmoke;
     font-size: 13px;
 }
+.carroFlex{
+   display: flex; 
+}

@@ -67,14 +67,10 @@
     align-items: center;
     border-left: 1px solid white;
 }
+.contenedorBtn:active{
+background: #b3262f;
+}
 .finalizar1{
     color: white;
     font-size: 20px;
-}
-.finalizar2{
-    color: white;
-    font-size: 15px;
-        
-    
-    
 }

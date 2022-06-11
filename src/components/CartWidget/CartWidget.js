@@ -10,9 +10,12 @@ const cantidad = acumularCarro()
 
 return (
         <div className='iconoCarro'>
-            <img src='./images/IconoCarga.svg' alt='iconoCarga'></img>
-            <div className="circulo">{cantidad}</div>
-            
+            { cantidad === 0 
+            ? "" 
+            : <div className="carroFlex">
+                <img src={require('../../images/iconoCarro.png')} alt='iconoCarga'></img>
+                <div className="circulo">{cantidad}</div>
+              </div>}           
         </div>       
     )
 }
