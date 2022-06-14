@@ -6,31 +6,51 @@
     margin: 20px 40px;
 
 }
+.tituloLinea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgLogo{
+    margin-top: 30px;
+}
+.tituloToc{
+    display: flex;
+    
+}
 .titulo{
-    font-size: 50px;
+    
+    font-size: 30px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.linea{
+    width: 60vh;
+    height: 2px;
+    background-color: black;
+    margin: 0px 100px;
+
 }
 h4{
     padding: 0px 100px;
-    color: gray;
+    color: black;
     margin-bottom: 50px;
 }
 .contenedorCategoria{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .iconoCategoria{
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
-background-color: #f7333f;
+background-color: #31475e;
 border-radius: 50px;
-width: 300px;
-height: 300px;
-margin: 20px;
-margin-bottom: 70px;
+width: 100px;
+height: 100px;
+margin: 30px 100px ;
 cursor: pointer;
 }
 .icono{
@@ -49,4 +69,8 @@ cursor: pointer;
     border-radius: 10px;
     padding: 10px;   
     width: 80px;
+}
+
+a{
+    margin: 0px;
 }

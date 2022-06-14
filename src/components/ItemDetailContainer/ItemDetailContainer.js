@@ -3,7 +3,9 @@ import {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import './ItemDetailContainer.css'
 import { useParams } from 'react-router-dom'
-import productoId from '../../herramientas/asyncMock2'
+//import productoId from '../../herramientas/asyncMock2'
+import {getDoc, doc} from 'firebase/firestore'
+import { toc } from '../../service/firebase'
 
 const ItemDetailContainer = () => {
     const[products, setProducts] = useState ()
@@ -11,9 +13,17 @@ const ItemDetailContainer = () => {
     const[cargando, setCargando] = useState(true)
     
     useEffect (()=>{
-        productoId(pId).then(resultado => {setProducts(resultado)}).catch(error => {
+
+      getDoc(doc(toc, 'productos', pId)).then(resultado => {
+        const products = {id: resultado.id, ...resultado.data() }
+        setProducts(products)
+      }).catch(error => {
+        alert (error)
+       }).finally(() => {setCargando(false)})
+
+        /*productoId(pId).then(resultado => {setProducts(resultado)}).catch(error => {
           alert (error)
-         }).finally(() => {setCargando(false)})
+         }).finally(() => {setCargando(false)})*/
     }, )
 
     if (cargando) {
@@ -27,8 +37,8 @@ const ItemDetailContainer = () => {
   }
 
   return (
-       <div className='contenedor'> 
-            <h1>Detalle del producto</h1>
+       <div className='contenedorDetalle'> 
+            
             <ItemDetail {...products}/>
             
         </div>

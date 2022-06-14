@@ -1,3 +1,7 @@
+.contenedorDetalle{
+    margin-top: 15vh;
+}
+
 .tresPuntos{
     display: flex;
     justify-content: center;
@@ -15,6 +19,7 @@
     animation: loader 1.2s ease infinite;
 
 }
+
 @keyframes loader{
     0%{top: 0px ;}
     50%{ width: 23px; height: 23px; background-color: #f7333f;}

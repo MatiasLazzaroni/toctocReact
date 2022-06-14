@@ -25,7 +25,12 @@ const CartContainer = () => {
     
     : <div className='carroContainer'>
       
-      <h1>Carro TocToc</h1>
+      <img className='imgLogo' src={require('../../images/logoToc.png')} alt='Icono'></img>
+      <div className='tituloLineaCarro'>
+        <div className='linea'></div>
+          <div className='tituloToc'><h2 className='titulo'>CarroToc</h2></div>
+        <div className='linea'></div>
+      </div>
       { carro.map ( prod => <ItemCart {...prod} borrar = {eliminarItem} key= {prod.id} />)}
       
       <div className='barraTotal'>        
