@@ -37,15 +37,15 @@ const Formulario = () => {
             </div>
             <div className='cuerpoInput'>
                 <label for="usuario" className="nombreInput">Celular: </label>
-                <input type="number" name="usuario" className="inputForm" required></input>
+                <input type="number" name="usuario" className="inputForm" required value={comprador.celular} onChange={(e)=> setComprador({...comprador, celular: e.target.value})}></input>
             </div>
             <div className='cuerpoInput'>
                 <label for="usuario" className="nombreInput">Correo: </label>
-                <input type="email" name="usuario" className="inputForm" required></input>
+                <input type="email" name="usuario" className="inputForm" required value={comprador.correo} onChange={(e)=> setComprador({...comprador, correo: e.target.value})}></input>
             </div>
             <div className='cuerpoInput'>
                 <label for="usuario" className="nombreInput">Notas: </label>
-                <textarea name="textarea" rows="10" cols="20" className="inputForm" placeholder='Comentario sobre el producto...' required></textarea>
+                <textarea name="textarea" rows="10" cols="20" className="inputForm" placeholder='Comentario sobre el producto...' required value={comprador.notas} onChange={(e)=> setComprador({...comprador, notas: e.target.value})}></textarea>
             </div>
             <div className='btnSeguir'> 
                 <p className='textoVolver' onClick={crearOrden()}>Enviar</p>
