@@ -11,7 +11,7 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre, id})
     const {agregarProd} = useContext(Context)
    
     function onAdd (quantity) {
-       console.log("quantity ItemDetail "+quantity)
+       console.log("quantity ItemDetail "+ quantity)
         setQuantity(quantity)
         agregarProd({id, nombre, precio, quantity, stock})      
             

@@ -1,10 +1,17 @@
 import { createContext, useState } from "react";
+import { addDoc, collection } from 'firebase/firestore'
+import { toc } from '../service/firebase/index'
 
 const Context = createContext()
 
 export const ContextToc = ({children}) => {
     const [carro, setCarro] = useState([])
-
+    const [comprador, setComprador] = useState({
+      nombre:'',
+      celular:'',
+      correo:'',
+      notas:''
+  })
     
     const agregarProd = (prodAgregar) => {
 
@@ -60,8 +67,37 @@ export const ContextToc = ({children}) => {
       return total
   }
 
+  //funciones de firebase
+
+ const cargarDatos = (e)=> {
+     setComprador({
+        ...comprador,
+        [e.target.name]:[e.target.value]
+
+     })
+}
+
+const enviarDatos = (e)=>{
+    e.preventDefault();
+    console.log('enviando datos...' + comprador.nombre + ' ' + comprador.apellido)
+}
+
+const subirDatos = ()=>{
+    const objOrden = {
+        comprador,
+        items: carro,
+        total: resultadoTotal()
+    }
+
+    addDoc(collection(toc, 'pedidos'), objOrden).then(()=>{
+        console.log (comprador)
+    })
+
+    borrarTodo()
+}
+
     return (
-        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal }}>
+        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, enviarDatos, subirDatos }}>
             {children}
         </Context.Provider>
 

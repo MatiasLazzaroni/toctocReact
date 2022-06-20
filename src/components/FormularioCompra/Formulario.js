@@ -1,57 +1,60 @@
-import {React, useState, useContext} from 'react'
+import {React, useContext} from 'react'
 import './Formulario.css'
 import Context from '../../context/Context'
-import { addDoc, collection } from 'firebase/firestore'
-import { toc } from '../../service/firebase'
+
 
 const Formulario = () => {
-    const {carro, resultadoTotal} = useContext(Context)
-    const [comprador, setComprador] = useState({
-        nombre:'',
-        celular:'',
-        correo:'',
-        notas:''
-    })
-
-     const crearOrden = ()=> {
-         const objOrden = {
-            comprador,
-            items: carro,
-            total: resultadoTotal()
-         }
-
-        addDoc(collection(toc, 'pedidos'), objOrden).then(({id})=>{
-            console.log (`Se agrega el pedido numero: ${id}`)
-        })
-    }
-
+    const {cargarDatos, enviarDatos, subirDatos} = useContext(Context)
+   
 
   return (
     <section className='contenedorForm'>
         
-        <form className='cuerpoForm'>
+        <form className='cuerpoForm' onSubmit={enviarDatos}>
             <h1 className='tituloForm'>Orden de Compra</h1>
+            
             <div className='cuerpoInput'>
-                <label for="usuario" className="nombreInput">Nombre y apellido: </label>
-                <input type="text" name="usuario" className="inputForm" required value={comprador.nombre} onChange={(e)=> setComprador({...comprador, nombre: e.target.value})}></input>
+                <label for="cliente" className="nombreInput">Nombre y apellido: </label>
+                <input  type="text" 
+                        name="cliente" 
+                        className="inputForm" 
+                        required="required" 
+                        
+                        onChange={cargarDatos}></input>
             </div>
             <div className='cuerpoInput'>
-                <label for="usuario" className="nombreInput">Celular: </label>
-                <input type="number" name="usuario" className="inputForm" required value={comprador.celular} onChange={(e)=> setComprador({...comprador, celular: e.target.value})}></input>
+                <label for="celular" className="nombreInput">Celular: </label>
+                <input  type="text" 
+                        name="celular" 
+                        className="inputForm" 
+                        required="required" 
+                        
+                        onChange={cargarDatos}></input>
             </div>
             <div className='cuerpoInput'>
-                <label for="usuario" className="nombreInput">Correo: </label>
-                <input type="email" name="usuario" className="inputForm" required value={comprador.correo} onChange={(e)=> setComprador({...comprador, correo: e.target.value})}></input>
+                <label for="correo" className="nombreInput">Correo: </label>
+                <input  type="email" 
+                        name="correo" 
+                        className="inputForm" 
+                        required="required" 
+                        
+                        onChange={cargarDatos}></input>
             </div>
             <div className='cuerpoInput'>
-                <label for="usuario" className="nombreInput">Notas: </label>
-                <textarea name="textarea" rows="10" cols="20" className="inputForm" placeholder='Comentario sobre el producto...' required value={comprador.notas} onChange={(e)=> setComprador({...comprador, notas: e.target.value})}></textarea>
+                <label for="notas" className="nombreInput">Notas: </label>
+                <textarea   name="notas" 
+                            rows="10" 
+                            cols="20" 
+                            className="inputForm" 
+                            placeholder='Comentario sobre el producto...' 
+                            required="required" 
+                            
+                            onChange={cargarDatos}></textarea>
             </div>
             <div className='btnSeguir'> 
-                <p className='textoVolver' onClick={crearOrden()}>Enviar</p>
+                <p type='submit' className='textoVolver' onClick={subirDatos}>Enviar</p>
             </div>
         </form>
-
     </section>
   )
 }
