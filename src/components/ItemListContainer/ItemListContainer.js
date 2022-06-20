@@ -19,7 +19,7 @@ function ItemListContainer () {
         setCargando(true)
 
         const collectionRef = cId
-        ? query( collection(toc, 'productos'), where ('categoria', '==', cId), limit(1))
+        ? query( collection(toc, 'productos'), where ('categoria', '==', cId))
         : collection(toc, 'productos')
 
         getDocs(collectionRef).then(respuesta => {

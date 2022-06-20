@@ -1,0 +1,37 @@
+.contenedorForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+}
+.tituloForm{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.cuerpoForm{
+    width: 350px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    padding: 25px;
+}
+.cuerpoInput{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.nombreInput{
+    font-size: 14px;
+    text-align: start;
+    font-weight: bolder;
+}
+
+.inputForm{
+    outline: none;
+    border: 0;    
+    background: rgb(255, 255, 255);
+    border-bottom: 2px solid #f7333f;
+    margin-top: 10px;
+
+}

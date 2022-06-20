@@ -7,12 +7,12 @@ export const ContextToc = ({children}) => {
 
     
     const agregarProd = (prodAgregar) => {
-      console.log(prodAgregar)
+
       if (!verificarCarro(prodAgregar.id)){
-        console.log ("verificar "+ verificarCarro())
+       
         setCarro ([...carro, prodAgregar])
       }else {
-        console.log ("entre al else")
+        
         const nuevoCarro = carro.map(prod => {
           if(prod.id === prodAgregar.id){
             const copiaProductoAgregado = {
@@ -20,13 +20,13 @@ export const ContextToc = ({children}) => {
               quantity: prodAgregar.quantity /* < prodAgregar.stock 
               ? prodAgregar.quantity + 1 : alert (" no hay stock")*/           
             } 
-        console.log("copia prodcuto" + copiaProductoAgregado)
+       
             return copiaProductoAgregado
           }else {
             return prod
           }
         })
-       console.log("nuevoCarro" + nuevoCarro )
+       
         setCarro (nuevoCarro)
     }
     }

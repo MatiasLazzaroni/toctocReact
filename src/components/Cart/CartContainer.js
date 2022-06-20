@@ -31,6 +31,7 @@ const CartContainer = () => {
           <div className='tituloToc'><h2 className='titulo'>CarroToc</h2></div>
         <div className='linea'></div>
       </div>
+
       { carro.map ( prod => <ItemCart {...prod} borrar = {eliminarItem} key= {prod.id} />)}
       
       <div className='barraTotal'>        
@@ -42,11 +43,18 @@ const CartContainer = () => {
         </div>
       </div>
 
-      <Link to='/productos'>
+      <section className='contenedorBtnCarro'>
+        <Link to='/productos'>
           <div className='btnSeguir'> 
             <p className='textoVolver'>Volver</p>
           </div>
         </Link>
+        <Link to='/formulario'>
+          <div className='btnSeguir'>
+            <p className='textoVolver' >Generar Orden</p>
+          </div>
+        </Link>
+      </section>
     </div>
   }
   </div>
