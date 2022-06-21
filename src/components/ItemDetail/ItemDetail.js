@@ -50,7 +50,9 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre, id})
                                             </div> 
                         </Link>                         
                     </div>
-                    : <ItemCount stock={stock} initial={1} agregar={onAdd}/>}                    
+                    : <ItemCount stock={stock} initial={1} agregar={onAdd}/>
+                    }
+                                    
                 </div>              
             </div>
     </div>
