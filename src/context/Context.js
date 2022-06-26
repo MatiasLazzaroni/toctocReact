@@ -104,7 +104,7 @@ const subirDatos = ()=>{
           confirmButtonColor:"#f7333f"
         })
     
-        console.log("pedido realizado")
+        console.log( "datos suministrados por el usuario: ",{objOrden} )
     })
     
     borrarTodo()
