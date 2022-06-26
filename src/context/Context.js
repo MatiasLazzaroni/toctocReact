@@ -26,8 +26,7 @@ export const ContextToc = ({children}) => {
           if(prod.id === prodAgregar.id){
             const copiaProductoAgregado = {
               ...prod,
-              quantity: prodAgregar.quantity /* < prodAgregar.stock 
-              ? prodAgregar.quantity + 1 : alert (" no hay stock")*/           
+              quantity: prodAgregar.quantity          
             } 
        
             return copiaProductoAgregado
