@@ -8,15 +8,15 @@ import {getDoc, doc} from 'firebase/firestore'
 import { toc } from '../../service/firebase'
 
 const ItemDetailContainer = () => {
-    const[products, setProducts] = useState ()
+    const[productos, setProductos] = useState ()
     const {pId} = useParams ()
     const[cargando, setCargando] = useState(true)
     
     useEffect (()=>{
 
       getDoc(doc(toc, 'productos', pId)).then(resultado => {
-        const products = {id: resultado.id, ...resultado.data() }
-        setProducts(products)
+        const productos = {id: resultado.id, ...resultado.data() }
+        setProductos(productos)
       }).catch(error => {
         alert (error)
        }).finally(() => {setCargando(false)})
@@ -39,7 +39,7 @@ const ItemDetailContainer = () => {
   return (
        <div className='contenedorDetalle'> 
             
-            <ItemDetail {...products}/>
+            <ItemDetail {...productos}/>
             
         </div>
   )

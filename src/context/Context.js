@@ -1,6 +1,8 @@
-import { createContext, useState } from "react";
+import { createContext, useState} from "react";
 import { addDoc, collection } from 'firebase/firestore'
 import { toc } from '../service/firebase/index'
+import Swal from 'sweetalert2'
+
 
 const Context = createContext()
 
@@ -83,18 +85,33 @@ const enviarDatos = (e)=>{
 }
 
 const subirDatos = ()=>{
-    const objOrden = {
+    
+  //const nombreProducto = carro.map(prod => prod.nombre)
+  const objOrden = {
         comprador,
         items: carro,
         total: resultadoTotal()
     }
 
     addDoc(collection(toc, 'pedidos'), objOrden).then(()=>{
-        console.log (comprador)
+     
+        Swal.fire({
+          
+          icon:"success",
+          title: "Hemos recibido su pedido",
+          text: "En breve nos pondremos en contacto para continuar trabjando con su pedido.",
+          footer: "<b>¡Muchas gracias por confiar en TocToc Carpinteria!</b>",
+          confirmButtonColor:"#f7333f"
+        })
+    
+        console.log("pedido realizado")
     })
-
+    
     borrarTodo()
-}
+  }
+
+
+
 
     return (
         <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, enviarDatos, subirDatos }}>

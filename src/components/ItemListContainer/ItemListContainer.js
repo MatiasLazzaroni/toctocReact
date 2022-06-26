@@ -5,7 +5,7 @@ import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import {Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import {getDocs, collection, query, where, limit} from 'firebase/firestore'
+import {getDocs, collection, query, where} from 'firebase/firestore'
 import { toc } from '../../service/firebase'
 
 

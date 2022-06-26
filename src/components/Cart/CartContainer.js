@@ -51,7 +51,7 @@ const CartContainer = () => {
         </Link>
         <Link to='/formulario'>
           <div className='btnSeguir'>
-            <p className='textoVolver' >Generar Orden</p>
+            <p className='textoVolver'> Generar Orden </p>
           </div>
         </Link>
       </section>

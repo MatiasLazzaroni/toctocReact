@@ -4,24 +4,52 @@
     align-items: center;
     margin-top: 8%;
 }
-.tituloForm{
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
-.cuerpoForm{
-    width: 350px;
-    height: 500px;
+.gridForm{
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 1f 1fr;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
     padding: 25px;
 }
+.pedidoSeleccionado{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.tituloForm{
+    margin-bottom: 40px;
+    margin-top: 10px;    
+}
+.nombrePedido{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #f7333f;
+    border-radius: 10px;
+    padding: 10px;
+}
+.precioPedido{
+    margin: 5px;
+    font-size: 30px;
+    
+}
+
+.cuerpoForm{
+    grid-row: 2/1;
+    padding-right: 15px;
+    border-right: 2px solid rgb(133, 133, 133);
+}
+
 .cuerpoInput{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
 }
 .nombreInput{
+    
     font-size: 14px;
     text-align: start;
     font-weight: bolder;
@@ -35,3 +63,4 @@
     margin-top: 10px;
 
 }
+
