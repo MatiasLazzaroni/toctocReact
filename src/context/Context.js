@@ -80,33 +80,29 @@ export const ContextToc = ({children}) => {
 }
 
 const enviarDatos = (e)=>{
-    e.preventDefault();
-    console.log('enviando datos...' + comprador.nombre + ' ' + comprador.apellido)
+    e.preventDefault(); 
 }
-
+      
 const subirDatos = ()=>{
-    
-  //const nombreProducto = carro.map(prod => prod.nombre)
+
   const objOrden = {
         comprador,
         items: carro,
         total: resultadoTotal()
     }
 
-    addDoc(collection(toc, 'pedidos'), objOrden).then(()=>{
+    addDoc(collection(toc, 'pedidos'), objOrden).then(({id})=>{
      
-        Swal.fire({
-          
+        Swal.fire({          
           icon:"success",
           title: "Hemos recibido su pedido",
-          text: "En breve nos pondremos en contacto para continuar trabjando con su pedido.",
+          text: `Su pedido numero: ${id} se ah cargado correctamente.`,
           footer: "<b>¡Muchas gracias por confiar en TocToc Carpinteria!</b>",
           confirmButtonColor:"#f7333f"
         })
     
         console.log( "datos suministrados por el usuario: ",{objOrden} )
     })
-    
     borrarTodo()
   }
 
