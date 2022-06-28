@@ -63,4 +63,41 @@
     margin-top: 10px;
 
 }
+.mensajeFinal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30vh 0vh 0vh 0vh;
+    padding: 0px;
+    grid-row: 2/1;
+}
+.textoFinal{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.tresPuntosFinal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+}
+.generandoOrden{
+    font-weight: bold;
+    font-size: 25px;
+}
+.puntoFinal{
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;   
+    margin-left: 5px;
+    animation: loader 1.2s ease infinite;
+}
+.contenedor2{
+    display: flex;
+}
 

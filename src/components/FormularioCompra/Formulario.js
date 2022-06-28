@@ -1,16 +1,74 @@
-import {React, useContext} from 'react'
+import {React, useContext, useState} from 'react'
 import './Formulario.css'
 import Context from '../../context/Context'
+import { addDoc, collection } from 'firebase/firestore'
+import { toc } from '../../service/firebase/index'
+import Swal from 'sweetalert2'
+
 
 
 const Formulario = () => {
-    const {cargarDatos, enviarDatos, subirDatos, carro, resultadoTotal} = useContext(Context)
-
+    const {cargarDatos, enviarDatos, carro, resultadoTotal, borrarTodo, comprador} = useContext(Context)
+    const[final, setFinal] = useState(false)
+    const[cargando, setCargando] = useState(false)
     const productoSeleccionado = carro.map(prod => prod.nombre)
     const imagenSeleccionado = carro.map(prod=> prod.descripcion)
     const totalCarro = resultadoTotal()
+    
    
+    const subirDatos = ()=>{
+
+        const objOrden = {
+              comprador,
+              items: carro,
+              total: resultadoTotal()
+          }
+         
+          addDoc(collection(toc, 'pedidos'), objOrden).then(({id})=>{     
+              Swal.fire({          
+                icon:"success",
+                title: "Hemos recibido su pedido",
+                text: `Su pedido numero: ${id} se ha cargado correctamente.`,
+                footer: "<b>¡Muchas gracias por confiar en TocToc Carpinteria!</b>",
+                confirmButtonColor:"#f7333f"
+              })
+          
+              console.log( "datos suministrados por el usuario: ",{objOrden} )
+          }).finally(() => {
+            setFinal(true)            
+            borrarTodo()
+        })
+        
+        setCargando(true)
+      }
+
+      if (final) {
+        return (
+        <div className='mensajeFinal'>
+            <img className= "imgCarroVacio"  src={require('../../images/carroLleno.png')} alt='carro lleno'></img>                    
+            <p className='textoFinal'>¡Gracias por su pedido!</p>
+        </div>
+        )
+    }
+      if (cargando) {
+            return (
+              <div className='tresPuntosFinal'>
+                <section className='contenedor1'>
+                    <p className='generandoOrden'>Generando orden</p>
+                </section>
+                <section className='contenedor2'>
+                    <div className='puntoFinal'></div>
+                    <div className='puntoFinal'></div>  
+                    <div className='puntoFinal'></div>  
+                </section>                
+              </div>
+            )    
+        }
+      
+       
+        
    
+
   return (
     <section className='contenedorForm'>
         

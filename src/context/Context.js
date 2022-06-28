@@ -1,7 +1,7 @@
 import { createContext, useState} from "react";
-import { addDoc, collection } from 'firebase/firestore'
-import { toc } from '../service/firebase/index'
-import Swal from 'sweetalert2'
+//import { addDoc, collection } from 'firebase/firestore'
+//import { toc } from '../service/firebase/index'
+//import Swal from 'sweetalert2'
 
 
 const Context = createContext()
@@ -14,6 +14,7 @@ export const ContextToc = ({children}) => {
       correo:'',
       notas:''
   })
+    
     
     const agregarProd = (prodAgregar) => {
 
@@ -82,7 +83,7 @@ const enviarDatos = (e)=>{
     e.preventDefault(); 
 }
       
-const subirDatos = ()=>{
+/*const subirDatos = ()=>{
 
   const objOrden = {
         comprador,
@@ -90,8 +91,7 @@ const subirDatos = ()=>{
         total: resultadoTotal()
     }
 
-    addDoc(collection(toc, 'pedidos'), objOrden).then(({id})=>{
-     
+    addDoc(collection(toc, 'pedidos'), objOrden).then(({id})=>{     
         Swal.fire({          
           icon:"success",
           title: "Hemos recibido su pedido",
@@ -102,14 +102,15 @@ const subirDatos = ()=>{
     
         console.log( "datos suministrados por el usuario: ",{objOrden} )
     })
-    borrarTodo()
-  }
 
+  
+    borrarTodo()
+}*/
 
 
 
     return (
-        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, enviarDatos, subirDatos }}>
+        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, enviarDatos, comprador }}>
             {children}
         </Context.Provider>
 

@@ -36,7 +36,7 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre, id})
                     <div className='logosTarjetas'>
                         
                         
-                        <img className='logosTC'  src={require('../../images/MasterCard.png')} alt='Icono Tarjeta'></img>
+                        
                         
                     </div>
                 </div>
