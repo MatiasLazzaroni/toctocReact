@@ -7,7 +7,7 @@ El proyecto trata de una e-commerce para un taller de carpinteria realizado con 
 ## Git
 
 - git clone 
-- cd . toctoc
+- cd toctoc
 - npm install
 - npm start
 
