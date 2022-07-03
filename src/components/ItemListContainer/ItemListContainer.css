@@ -1,9 +1,23 @@
+.portadaProductos{
+    background-image: url(../../images/portadaProductos.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .listaDeProductos{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 20px 40px;
+    
 
 }
 .tituloLinea{
@@ -11,35 +25,44 @@
     justify-content: center;
     align-items: center;
 }
-.imgLogo{
-    margin-top: 30px;
-}
+
+
 .tituloToc{
     display: flex;
     
 }
 .titulo{
     
-    font-size: 30px;
+    font-size: 50px;
     margin-top: -15px;
     margin-bottom: 15px;
+    color: white;
 }
 .linea{
-    width: 60vh;
-    height: 2px;
-    background-color: black;
+    width: 150vh;
+    height: 5px;
     margin: 0px 100px;
-
+    background: radial-gradient(#b4b3b3, #ffffff);
+    opacity: 0.5;
+    border-radius: 10px;
 }
-h4{
-    padding: 0px 100px;
-    color: black;
+.textoProd{
+    padding: 50px 220px;
+    color: rgb(100, 100, 100);
     margin-bottom: 50px;
+    text-align: center;
+    font-size: 25px;
 }
 .contenedorCategoria{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+.contenedorIconos{
+    display: flex;
+    padding: 20px;
 }
 .iconoCategoria{
 display: flex;
@@ -52,6 +75,10 @@ width: 100px;
 height: 100px;
 margin: 30px 100px ;
 cursor: pointer;
+}
+.iconoCategoria:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 }
 .icono{
     margin-right: 5px;

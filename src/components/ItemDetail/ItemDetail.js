@@ -26,18 +26,19 @@ const ItemDetail = ({stock, imagen, descripcion, precio, subtitulo, nombre, id})
         
                <div className='textoDetalle'>                   
                     <p> {subtitulo}</p>
-                    <h2>{nombre}</h2>     
+                    <h2 className='tituloDescrip'>{nombre}</h2>   
                     <p className='descripcion'>{descripcion} </p>
+                    
                     <div className='textoEnvio'>
                         <h4 className='envio'><b>ENVÍO GRATIS</b></h4>
                         <h5 >Solo en Bahia Blanca y Punta Alta</h5>
                     </div>                     
                     <p className='precio'>${precio}</p>
                     <div className='logosTarjetas'>
-                        
-                        
-                        
-                        
+                    <img className='tarjetas' src={require('../../images/VISA.png')} alt='Icono'></img>
+                    <img className='tarjetas' src={require('../../images/MasterCard.png')} alt='Icono'></img>
+                    <img className='tarjetas' src={require('../../images/naranja.png')} alt='Icono'></img>
+                    <img className='tarjetas' src={require('../../images/American.png')} alt='Icono'></img>
                     </div>
                 </div>
                 <div className='contador'>

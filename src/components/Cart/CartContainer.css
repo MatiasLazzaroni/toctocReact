@@ -1,8 +1,9 @@
 .carroContainer{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
 }
 .tituloLineaCarro{
     display: flex;
@@ -38,6 +39,7 @@
     padding: 20px;
     width: 1000px;
     
+    
 }
 .textoTotal{
     display: flex;
@@ -47,6 +49,7 @@
     font-size: 25px;
     color: white;
     margin-right: 50px;
+    
 }
 .btnLimpiar{
     display: flex;

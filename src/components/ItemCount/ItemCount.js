@@ -13,7 +13,7 @@ function ItemCount ({stock, initial, agregar}) {
     }
 
     function restar () {
-        if(quantity > 0) {
+        if(quantity > 1) {
             setQuantity(quantity - 1)
         }
     }
@@ -25,11 +25,9 @@ function ItemCount ({stock, initial, agregar}) {
     return(        
         <div className='cardBoton' >
             <div className="signo" onClick={restar}>-</div>
-            <div className='agregarCarrito'>
-                <div>
-                    <p className='contador'>{quantity}</p>
-                    <p className='texto' onClick={agregar2}>Agregar</p>
-                </div>
+            <div className='agregarCarrito'>                
+                <p className='contador'>{quantity}</p>
+                <p className='texto' onClick={agregar2}>Agregar</p>                
             </div>
             <div className="signo2" onClick={sumar}>+</div>
         </div>

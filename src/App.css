@@ -36,6 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.contenedorToc{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  
+}
+
+.contenido{
+  flex: 1;
+  
+
+}
+
 .logoToc{
   display: flex;
   justify-content: center;

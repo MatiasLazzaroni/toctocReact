@@ -2,11 +2,9 @@
 .cardBoton{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 70px;
-    
-    
+    grid-template-rows: 70px;   
     background: #f7333f;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .signo{

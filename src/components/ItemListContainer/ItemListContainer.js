@@ -1,6 +1,4 @@
 import {useEffect, useState} from 'react'
-//import promesa from '../../herramientas/asyncMock'
-//import productos from '../Productos/productos'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import {Link} from 'react-router-dom'
@@ -23,7 +21,6 @@ function ItemListContainer () {
         : collection(toc, 'productos')
 
         getDocs(collectionRef).then(respuesta => {
-            console.log (respuesta)
             const item = respuesta.docs.map(doc => {
                 return {id: doc.id, ...doc.data()}
             })
@@ -33,26 +30,7 @@ function ItemListContainer () {
            }).finally(() => {
             setCargando(false)
         })
-
-        /*if(!cId){
-           promesa(2000, productos)
-            .then(resultado => setItem(resultado)).catch(error => {
-            alert (error)
-            })
-            .finally(() => {setCargando(false)})   
-        }
-        else{
-            promesa(2000, productos)
-            .then(resultado => setItem(resultado.filter (prod => prod.categoria === cId)))
-            .catch(error => {
-             alert (error)
-            })
-            .finally(() => {
-                setCargando(false)
-            })
-        }*/
- 
-
+        
     }, [cId])
 
     if (cargando) {
@@ -68,39 +46,49 @@ function ItemListContainer () {
     return(
         
         <div>
-            <img className='imgLogo' src={require('../../images/logoToc.png')} alt='Icono'></img>
-            <div className='tituloLinea'>
-                <div className='linea'></div>
-                    <div className='tituloToc'><h2 className='titulo'>TocProductos</h2></div>
-                <div className='linea'></div>
+            <div className='portadaProductos'>
+                <div className='centrarImg'>
+                    <img className='imgLogo' src={require('../../images/logoToc.png')} alt='Icono'></img>
+                </div>
+                
+                <div className='tituloLinea'>
+                    
+                        <div className='tituloToc'><h2 className='titulo'>TocProductos</h2></div>
+                    
+                </div>
+
             </div>
             
-             <h4>Antes de planificar la decoracion de tu espacio, comienza por establecer el caracter de tu casa, proporciones, tamaños, luz y podras comenzar a disfrutar de tu ambiente con tus muebles nuevos.
-                Las casas deben ser tan personales, eclécticas y llenas de caracter como nosotros mismos y reflejar nuestro estilo de vida. Los muebles y los complementos pueden a ayudar a dar un aire nuevo a tu casa.
-            </h4>
+            
+             <h4 className='textoProd'>Antes de planificar la decoracion de tu espacio, comienza por establecer el caracter de tu casa, proporciones, tamaños, luz y podras comenzar a disfrutar de tu ambiente con tus muebles nuevos.
+                Las casas deben ser tan personales, eclécticas y llenas de caracter como nosotros mismos y reflejar nuestro estilo de vida. Los muebles y los complementos pueden a ayudar a dar un aire nuevo a tu casa.</h4>
             
             <div className='contenedorCategoria'>
-            
-            <Link to={`/categoria/habitacion`}>
-                <div className='iconoCategoria'>
-                    <img className='icono' src={require('../../images/iconoHabitacion.png')} alt='Icono'></img>
-                </div>
-            </Link>
-            <Link to={`/categoria/living`}>
-                <div className='iconoCategoria'>
-                    <img className='icono' src={require('../../images/IconoLiving.png')} alt='Icono'></img>
-                </div>
-            </Link>
-            <Link to={`/categoria/cocina`}>
-                <div className='iconoCategoria'>
-                    <img className='icono' src={require('../../images/iconoCocina.png')} alt='Icono'></img>
-                </div>
-            </Link>
-            <Link to={`/categoria/oficina`}>
-                <div className='iconoCategoria'>
-                    <img className='icono' src={require('../../images/iconoOficina.png')} alt='Icono'></img>
-                </div>
-            </Link>
+            <div className='linea'></div>
+            <div className='contenedorIconos'>            
+                <Link to={`/categoria/habitacion`}>
+                    <div className='iconoCategoria'>
+                        <img className='icono' src={require('../../images/iconoHabitacion.png')} alt='Icono'></img>
+                    </div>
+                </Link>
+                <Link to={`/categoria/living`}>
+                    <div className='iconoCategoria'>
+                        <img className='icono' src={require('../../images/IconoLiving.png')} alt='Icono'></img>
+                    </div>
+                </Link>
+                <Link to={`/categoria/cocina`}>
+                    <div className='iconoCategoria'>
+                        <img className='icono' src={require('../../images/iconoCocina.png')} alt='Icono'></img>
+                    </div>
+                </Link>
+                <Link to={`/categoria/oficina`}>
+                    <div className='iconoCategoria'>
+                        <img className='icono' src={require('../../images/iconoOficina.png')} alt='Icono'></img>
+                    </div>
+                </Link>
+            </div>
+            <div className='linea'></div>
+
             </div>
            
             <div className='listaDeProductos'>

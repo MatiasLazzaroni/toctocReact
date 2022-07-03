@@ -79,38 +79,10 @@ export const ContextToc = ({children}) => {
      })
 }
 
-const enviarDatos = (e)=>{
-    e.preventDefault(); 
-}
-      
-/*const subirDatos = ()=>{
-
-  const objOrden = {
-        comprador,
-        items: carro,
-        total: resultadoTotal()
-    }
-
-    addDoc(collection(toc, 'pedidos'), objOrden).then(({id})=>{     
-        Swal.fire({          
-          icon:"success",
-          title: "Hemos recibido su pedido",
-          text: `Su pedido numero: ${id} se ah cargado correctamente.`,
-          footer: "<b>¡Muchas gracias por confiar en TocToc Carpinteria!</b>",
-          confirmButtonColor:"#f7333f"
-        })
-    
-        console.log( "datos suministrados por el usuario: ",{objOrden} )
-    })
-
-  
-    borrarTodo()
-}*/
-
 
 
     return (
-        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, enviarDatos, comprador }}>
+        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, comprador }}>
             {children}
         </Context.Provider>
 

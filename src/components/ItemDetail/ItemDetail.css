@@ -2,19 +2,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    
+    
 }
 .detalleContenedor{
     display: grid;
     grid-template-columns: 600px 300px;
-    grid-template-rows: 510px 70px;
+    grid-template-rows: 540px 70px;
     background-color: white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
 }
 .contador{
     grid-column:2/3;
 }
+.tituloDescrip{
+    text-align: center;
+}
 .descripcion{
     padding: 0px;
+    text-align: center;
 }
 .precio{
     font-size: 40px;
@@ -23,9 +30,13 @@
   
 }
 .textoDetalle{
-   
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
     border-left: 2px solid grey;
+    
     
 }
 .textoDetalle h2{
@@ -33,6 +44,10 @@
    
 }
 .textoEnvio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 15px;
     margin: 0px;
     padding: 5px;
@@ -45,7 +60,7 @@
 .logosTarjetas{
     display: flex;
 }
-.logosTC{
+.tarjetas{
     margin-left: 20px;
 }
 .imagenProd{

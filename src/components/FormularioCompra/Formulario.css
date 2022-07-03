@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8%;
+    margin-top: 5%;
 }
 .gridForm{
     display: grid;
@@ -30,6 +30,7 @@
     border: 1px solid #f7333f;
     border-radius: 10px;
     padding: 10px;
+    text-align: center;
 }
 .precioPedido{
     margin: 5px;
@@ -62,6 +63,15 @@
     border-bottom: 2px solid #f7333f;
     margin-top: 10px;
 
+}
+.textoError{
+    color: red;
+    padding: 5px;
+    text-align: center;
+}
+.textoError::before{
+    display: inline;
+    content: "⚠ ";     
 }
 .mensajeFinal{
     display: flex;
@@ -100,4 +110,5 @@
 .contenedor2{
     display: flex;
 }
+
 

@@ -4,20 +4,33 @@ import Context from '../../context/Context'
 import { addDoc, collection } from 'firebase/firestore'
 import { toc } from '../../service/firebase/index'
 import Swal from 'sweetalert2'
+import { useForm } from 'react-hook-form'
+
 
 
 
 const Formulario = () => {
-    const {cargarDatos, enviarDatos, carro, resultadoTotal, borrarTodo, comprador} = useContext(Context)
+    const {cargarDatos,  carro, resultadoTotal, borrarTodo, comprador} = useContext(Context)
     const[final, setFinal] = useState(false)
     const[cargando, setCargando] = useState(false)
     const productoSeleccionado = carro.map(prod => prod.nombre)
     const imagenSeleccionado = carro.map(prod=> prod.descripcion)
     const totalCarro = resultadoTotal()
+    const {register, handleSubmit} = useForm({
+        valorInicial: {
+            cliente: ""           
+          }
+    });
     
+  
    
-    const subirDatos = ()=>{
+     const onSubmit = (data) => {
+            console.log(data)
+           
+        }
 
+    const subirDatos = (e)=>{ 
+         e.preventDefault(); 
         const objOrden = {
               comprador,
               items: carro,
@@ -63,16 +76,12 @@ const Formulario = () => {
                 </section>                
               </div>
             )    
-        }
-      
-       
-        
-   
+        }   
 
-  return (
+return (
     <section className='contenedorForm'>
         
-        <form className='gridForm' onSubmit={enviarDatos}>
+        <form className='gridForm' onSubmit={handleSubmit(onSubmit)}>
                 
                 <article className='pedidoSeleccionado'>
                     <img  src={require('../../images/LogoTocCarrito.png')} alt='logo Toc Carrito'></img>
@@ -90,27 +99,29 @@ const Formulario = () => {
                     <input  type="text" 
                             name="cliente" 
                             className="inputForm" 
-                            required 
-                            
-                            onChange={cargarDatos}></input>
+                            {...register("cliente", {required: true})}  
+                            onChange={cargarDatos}                            
+                    ></input>
+                    
                 </div>
                 <div className='cuerpoInput'>
                     <label for="celular" className="nombreInput">Celular: </label>
                     <input  type="text" 
                             name="celular" 
                             className="inputForm" 
-                            required
-                            
-                            onChange={cargarDatos}></input>
+                            onChange={cargarDatos}                         
+                    ></input>
+                    
                 </div>
                 <div className='cuerpoInput'>
                     <label for="correo" className="nombreInput">Correo: </label>
                     <input  type="email" 
                             name="correo" 
-                            className="inputForm" 
-                            required
-                            
-                            onChange={cargarDatos}></input>
+                            className="inputForm"                             
+                            onChange={cargarDatos}                            
+                    ></input>
+                   
+                   
                 </div>
                 <div className='cuerpoInput'>
                     <label for="notas" className="nombreInput">Notas: </label>
@@ -119,12 +130,10 @@ const Formulario = () => {
                                 cols="20" 
                                 className="inputForm" 
                                 placeholder='Comentario sobre el producto...' 
-                                required
-                                
                                 onChange={cargarDatos}></textarea>
                 </div>
                 <div className='btnSeguir'> 
-                    <p type='submit' className='textoVolver' onClick={subirDatos}>Enviar</p>
+                    <buttom type='submit' className='textoVolver' onClick={subirDatos}>Enviar</buttom>
                 </div>
             </div>
         </form>

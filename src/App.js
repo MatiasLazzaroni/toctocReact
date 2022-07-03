@@ -6,18 +6,20 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CartContainer from './components/Cart/CartContainer';
 import { ContextToc } from './context/Context';
 import FormularioCompra from './components/FormularioCompra/Formulario';
-
+import Footer from './components/Footer/Footer'
 
 function App() {
 
 
 
   return (
-    <div className="App">
-      <header>
-        <ContextToc>
+    <div className="contenedorToc">
+       <ContextToc>
           <BrowserRouter>
+           <header>
           <NavBar/>
+          </header>
+          <main className='contenido'>
             <Routes>
               <Route path='/' element={<div className='logoToc'><img src={require('./images/logoToctoc.png')} alt="logo"></img></div>}/>
               <Route path='/productos' element={<ItemListContainer/>}/>
@@ -27,9 +29,11 @@ function App() {
               <Route path='*' element={<h1 className='ups'>¡Ups! Página no encontrada.</h1> }/>
               <Route path='/formulario' element={<FormularioCompra/>}></Route>
             </Routes>
+          </main>
+          <Footer/>
           </BrowserRouter>
        </ContextToc>
-      </header>
+      
     </div>
   );
 }
