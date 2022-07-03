@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-=======
 
-![logoToctoc](https://user-images.githubusercontent.com/89713593/176347008-25fb05c6-3df8-4b4a-950b-fae4dacfd166.png)
->>>>>>> 0b47effcbf6dc400e120edb9d70257c20c7f6ef5
+
 
 # Carpinteria TocToc Web
 El proyecto trata de una e-commerce para un taller de carpinteria realizado con ReactJs. La idea es brindar todo el servicio de venta y atencion por la app, asi el taller puede enfocarce mas en sus trabajos.
 
 ## Git
 
-<<<<<<< HEAD
 - git clone https://github.com/MatiasLazzaroni/toctocReact
 - cd . toctoc
-=======
-- git clone 
-- cd toctoc
->>>>>>> 0b47effcbf6dc400e120edb9d70257c20c7f6ef5
 - npm install
 - npm start
 
@@ -52,6 +44,5 @@ REACT_APP_FIREBASE_appId
 ## Autor
 
 Matias Lazzaroni
-=======
-## Firebase
->>>>>>> 0b47effcbf6dc400e120edb9d70257c20c7f6ef5
+
+
