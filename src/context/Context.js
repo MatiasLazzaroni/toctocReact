@@ -1,8 +1,4 @@
 import { createContext, useState} from "react";
-//import { addDoc, collection } from 'firebase/firestore'
-//import { toc } from '../service/firebase/index'
-//import Swal from 'sweetalert2'
-
 
 const Context = createContext()
 
@@ -69,8 +65,6 @@ export const ContextToc = ({children}) => {
       return total
   }
 
-  //funciones de firebase
-
  const cargarDatos = (e)=> {
      setComprador({
         ...comprador,
@@ -79,14 +73,12 @@ export const ContextToc = ({children}) => {
      })
 }
 
+return (
+  <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, comprador }}>
+    {children}
+  </Context.Provider>
 
-
-    return (
-        <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, comprador }}>
-            {children}
-        </Context.Provider>
-
-    )
+ )
 }
 
 export default Context

@@ -9,6 +9,7 @@ import { useForm } from 'react-hook-form'
 
 
 
+
 const Formulario = () => {
     const {cargarDatos,  carro, resultadoTotal, borrarTodo, comprador} = useContext(Context)
     const[final, setFinal] = useState(false)
@@ -16,11 +17,7 @@ const Formulario = () => {
     const productoSeleccionado = carro.map(prod => prod.nombre)
     const imagenSeleccionado = carro.map(prod=> prod.descripcion)
     const totalCarro = resultadoTotal()
-    const {register, handleSubmit} = useForm({
-        valorInicial: {
-            cliente: ""           
-          }
-    });
+    const {handleSubmit} = useForm();
     
   
    
@@ -99,10 +96,10 @@ return (
                     <input  type="text" 
                             name="cliente" 
                             className="inputForm" 
-                            {...register("cliente", {required: true})}  
-                            onChange={cargarDatos}                            
+                            onChange={cargarDatos} 
+                                                       
                     ></input>
-                    
+
                 </div>
                 <div className='cuerpoInput'>
                     <label for="celular" className="nombreInput">Celular: </label>
