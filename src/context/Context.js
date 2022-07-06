@@ -65,16 +65,21 @@ export const ContextToc = ({children}) => {
       return total
   }
 
- const cargarDatos = (e)=> {
+  const cargarDatos = (e)=> {
      setComprador({
         ...comprador,
         [e.target.name]:[e.target.value]
 
-     })
+     }) 
+
 }
 
+  const enviarDatos = (e) => {
+      e.preventDefault(); 
+   }
+
 return (
-  <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, comprador }}>
+  <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, comprador, enviarDatos }}>
     {children}
   </Context.Provider>
 

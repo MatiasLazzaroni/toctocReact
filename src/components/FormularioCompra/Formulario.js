@@ -4,30 +4,22 @@ import Context from '../../context/Context'
 import { addDoc, collection } from 'firebase/firestore'
 import { toc } from '../../service/firebase/index'
 import Swal from 'sweetalert2'
-import { useForm } from 'react-hook-form'
 
 
 
 
 
 const Formulario = () => {
-    const {cargarDatos,  carro, resultadoTotal, borrarTodo, comprador} = useContext(Context)
+    const {enviarDatos, cargarDatos,  carro, resultadoTotal, borrarTodo, comprador} = useContext(Context)
     const[final, setFinal] = useState(false)
     const[cargando, setCargando] = useState(false)
     const productoSeleccionado = carro.map(prod => prod.nombre)
     const imagenSeleccionado = carro.map(prod=> prod.descripcion)
     const totalCarro = resultadoTotal()
-    const {handleSubmit} = useForm();
     
-  
-   
-     const onSubmit = (data) => {
-            console.log(data)
-           
-        }
-
+    
     const subirDatos = (e)=>{ 
-         e.preventDefault(); 
+         
         const objOrden = {
               comprador,
               items: carro,
@@ -78,7 +70,7 @@ const Formulario = () => {
 return (
     <section className='contenedorForm'>
         
-        <form className='gridForm' onSubmit={handleSubmit(onSubmit)}>
+        <form className='gridForm' onSubmit={enviarDatos}>
                 
                 <article className='pedidoSeleccionado'>
                     <img  src={require('../../images/LogoTocCarrito.png')} alt='logo Toc Carrito'></img>
