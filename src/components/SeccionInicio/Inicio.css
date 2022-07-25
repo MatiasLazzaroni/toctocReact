@@ -1,0 +1,234 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.contenedorInicio{
+  margin: 0px;
+}
+.tituloPortada{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px                                                                                                                                                          ;
+}
+
+.tituloPortada h1 {
+  font-size: 50px;
+}
+
+.tituloPortada h3 {
+  
+  font-size: 40px;
+}
+.box1{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  clip-path: polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%);
+
+}
+.box1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;  
+}
+.contenedorTxt{
+  position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.textoCentrado{
+  position: absolute;
+    top: 60%;
+    left: 10%;
+    right: 70%;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  font-size: 3rem;  
+}
+.subtitulo1{
+  font-size: 55px;
+  text-align: center;
+  margin: 50px 50px 100px 50px;
+  
+}
+.box2{
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 1fr;
+}
+.contenidoBox2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  clip-path: circle(50%);
+  margin: 50px;
+}
+.contenidoBox2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;  
+}
+.texto2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+.texto2 h4{
+  color: rgb(80, 80, 80);
+}
+
+.box3{
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: 1fr;
+  margin: 15px;  
+}
+.texto3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  padding: 20px;
+}
+.texto3 h4{
+  color: rgb(80, 80, 80);
+}
+.box4{
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 1fr;
+  margin: 15px;
+}
+.texto4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+.texto4 h4{
+  color: rgb(80, 80, 80);
+}
+
+/*Seccion imagenes*/
+.imagenes{
+  display: flex;  
+  width: 100%;
+  flex-wrap: wrap;
+}
+.grupo1, .grupo2, .grupo3{
+  position: relative;
+  display: inline-block;
+}
+.tituloImg{
+  display: none;
+  transition: all .8s;
+  position: absolute;
+  top: 30%;
+  left: 23%;
+  font-size: 40px;
+  color: rgb(46, 46, 46);  
+}
+.descripcionImg{
+  display: none;
+  transition: all .8s;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  font-size: 30px;
+  color: rgb(46, 46, 46); 
+}
+.grupo1:hover > .tituloImg{
+  display: block;
+  transition: all .8s;
+}
+.grupo1:hover > .descripcionImg{
+  display: block;
+  transition: all .8s;
+}
+.grupo1:hover > .img1{
+  opacity: 0.3;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.contenedorGrupo{
+  display: flex;
+  flex-direction: column;
+}
+.tituloImg2{
+  display: none;
+  transition: all .8s;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  font-size: 40px;
+  color: rgb(46, 46, 46);  
+}
+.descripcionImg2{
+  display: none;
+  transition: all .8s;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-size: 30px;
+  color: rgb(46, 46, 46); 
+}
+.img2{
+  display: flex;
+  flex-direction: column;
+}
+.grupo2:hover > .tituloImg2{
+  display: block;
+  transition: all .8s;
+}
+.grupo2:hover > .descripcionImg2{
+  display: block;
+  transition: all .8s;
+}
+.grupo2:hover > .img2{
+  opacity: 0.3;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.tituloImg3{
+  display: none;
+  transition: all .8s;
+  position: absolute;
+  top: 30%;
+  left: 70px;
+  font-size: 40px;
+  color: rgb(46, 46, 46);  
+}
+.descripcionImg3{
+  display: none;
+  transition: all .8s;
+  position: absolute;
+  top: 35%;
+  left: 15px;
+  font-size: 30px;
+  color: rgb(46, 46, 46); 
+}
+.grupo3:hover > .tituloImg3{
+  display: block;
+  transition: all .8s;
+}
+.grupo3:hover > .descripcionImg3{
+  display: block;
+  transition: all .8s;
+}
+.grupo3:hover > .img3{
+  opacity: 0.3;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}

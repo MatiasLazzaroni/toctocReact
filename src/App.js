@@ -7,6 +7,7 @@ import CartContainer from './components/Cart/CartContainer';
 import { ContextToc } from './context/Context';
 import FormularioCompra from './components/FormularioCompra/Formulario';
 import Footer from './components/Footer/Footer'
+import Inicio from './components/SeccionInicio/Inicio'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
           </header>
           <main className='contenido'>
             <Routes>
-              <Route path='/' element={<div className='logoToc'><img src={require('./images/logoToctoc.png')} alt="logo"></img></div>}/>
+              <Route path='/' element={<Inicio/>}/>
               <Route path='/productos' element={<ItemListContainer/>}/>
               <Route path='/categoria/:cId' element={<ItemListContainer/>}/>
               <Route path='/detalles/:pId' element={<ItemDetailContainer/>}/>
