@@ -46,48 +46,44 @@ function ItemListContainer () {
     return(
         
         <div>
-            <div className='portadaProductos'>
-                <div className='centrarImg'>
-                    <img className='imgLogo' src={require('../../images/logoToc.png')} alt='Icono'></img>
+            <h1 className='titulo1'>TocProdcutos</h1>
+            <h3 className='titulo2'>Elige entre todos <br></br> los productos que tenemos <br></br>preparado para usted.</h3>
+            <h4 className='titulo3'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br></br> Sed a felis non sem elementum tempor in at urna. Suspendisse <br></br>auctor libero ut nibh consequat sed sagittis dolor iaculis.</h4>
+            <section className='box1'>            
+                <h2 className='textoCentrado'>Te ayudamos a darle vida a tus ideas</h2>           
+                <img className='imgLogo' src={require('../../images/portadaProductos.jpg')} alt='Icono'></img>
+            </section>                     
+            <div className='contenedorCategoria'>
+                
+                <h2>Categorias</h2> 
+                <div className='contenedorIconos'>   
+                            
+                    <Link to={`/categoria/habitacion`}>
+                        <div className='iconoCategoria'>
+                        
+                            <p>Habitaciones</p>
+                        </div>
+                    </Link>
+                    <Link to={`/categoria/living`}>
+                        <div className='iconoCategoria'>
+                        
+                            <p>Living</p>
+                        </div>
+                    </Link>
+                    <Link to={`/categoria/cocina`}>
+                        <div className='iconoCategoria'>
+                        
+                            <p>Cocinas</p>
+                        </div>
+                    </Link>
+                    <Link to={`/categoria/oficina`}>
+                        <div className='iconoCategoria'>
+                            
+                            <p>Oficinas</p>
+                        </div>
+                    </Link>
                 </div>
                 
-                <div className='tituloLinea'>
-                    
-                        <div className='tituloToc'><h2 className='titulo'>TocProductos</h2></div>
-                    
-                </div>
-
-            </div>
-            
-            
-             <h4 className='textoProd'>Antes de planificar la decoracion de tu espacio, comienza por establecer el caracter de tu casa, proporciones, tamaños, luz y podras comenzar a disfrutar de tu ambiente con tus muebles nuevos.
-                Las casas deben ser tan personales, eclécticas y llenas de caracter como nosotros mismos y reflejar nuestro estilo de vida. Los muebles y los complementos pueden a ayudar a dar un aire nuevo a tu casa.</h4>
-            
-            <div className='contenedorCategoria'>
-            <div className='linea'></div>
-            <div className='contenedorIconos'>            
-                <Link to={`/categoria/habitacion`}>
-                    <div className='iconoCategoria'>
-                        <img className='icono' src={require('../../images/iconoHabitacion.png')} alt='Icono'></img>
-                    </div>
-                </Link>
-                <Link to={`/categoria/living`}>
-                    <div className='iconoCategoria'>
-                        <img className='icono' src={require('../../images/IconoLiving.png')} alt='Icono'></img>
-                    </div>
-                </Link>
-                <Link to={`/categoria/cocina`}>
-                    <div className='iconoCategoria'>
-                        <img className='icono' src={require('../../images/iconoCocina.png')} alt='Icono'></img>
-                    </div>
-                </Link>
-                <Link to={`/categoria/oficina`}>
-                    <div className='iconoCategoria'>
-                        <img className='icono' src={require('../../images/iconoOficina.png')} alt='Icono'></img>
-                    </div>
-                </Link>
-            </div>
-            <div className='linea'></div>
 
             </div>
            

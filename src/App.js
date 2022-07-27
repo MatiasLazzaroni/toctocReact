@@ -10,9 +10,6 @@ import Footer from './components/Footer/Footer'
 import Inicio from './components/SeccionInicio/Inicio'
 
 function App() {
-
-
-
   return (
     <div className="contenedorToc">
        <ContextToc>

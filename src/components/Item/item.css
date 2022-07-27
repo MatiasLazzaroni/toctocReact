@@ -18,6 +18,7 @@
 
 .cardTexto{
     color: grey;
+    padding: 8%;
     
 }
 .cardTexto h2{
@@ -27,14 +28,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+   
 }
 .btnDetalle div{
-     color: white;
-     background-color: #f7333f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #f7333f;
     border-radius: 10px;
     padding: 10px;   
-    width: 80px;
+    width: 80px; 
+    
 }
 
 a{

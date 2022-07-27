@@ -1,14 +1,11 @@
 
-.contenedorFooter{
-    
-    background-color: #243f50;
+.contenedorFooter{    
+    background-color: #121212;
     width: 100%;    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 150px;
     padding: 10px 0px;
-    margin-top: 40px;
-    
 }
 
 .seccionUno{

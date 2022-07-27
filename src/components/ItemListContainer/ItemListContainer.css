@@ -16,8 +16,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 20px 40px;
-    
+   
+    padding: 40px 10%;
 
 }
 .tituloLinea{
@@ -59,29 +59,47 @@
     align-items: center;
     flex-direction: column;
     padding: 15px;
+    background-color: rgb(233, 233, 233);
+}
+.contenedorCategoria h2{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
 }
 .contenedorIconos{
     display: flex;
     padding: 20px;
 }
+
 .iconoCategoria{
+
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 background-color: #31475e;
-border-radius: 50px;
-width: 100px;
-height: 100px;
+border-radius: 100px;
+width: 180px;
+height: 180px;
 margin: 30px 100px ;
 cursor: pointer;
+
 }
+.iconoCategoria p{
+    color: #ffffff;    
+    font-size: 25px;
+}
+
+
 .iconoCategoria:hover{
     transform: scale(1.1, 1.1);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 }
 .icono{
-    margin-right: 5px;
+    
+    width: 50px;
+    height: 50px;
 }
 
 .btnVista{

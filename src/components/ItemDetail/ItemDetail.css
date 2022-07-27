@@ -3,8 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-    
+    margin-bottom: 5%;    
 }
 .detalleContenedor{
     display: grid;
@@ -34,8 +33,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 10%;
     border-left: 2px solid grey;
+    text-align: center;
     
     
 }

@@ -78,6 +78,8 @@ export const ContextToc = ({children}) => {
       e.preventDefault(); 
    }
 
+
+
 return (
   <Context.Provider value={{carro, agregarProd, acumularCarro, eliminarItem, borrarTodo, verificarCarro, resultadoTotal, cargarDatos, comprador, enviarDatos }}>
     {children}

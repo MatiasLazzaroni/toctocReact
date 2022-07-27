@@ -14,6 +14,7 @@
   top: 20%;
   left: 10%;
   font-size: 35px;
+  color: white;
   
 }
 .titulo2{
@@ -21,12 +22,14 @@
   top: 25%;
   left: 10%;
   font-size: 40px;
+  color: white;
 }
 .titulo3{
   position: absolute;
   top: 43%;
   left: 10%;
   font-size: 20px;
+  color: white;
 }
 .box1{
   width: 100%;
@@ -49,9 +52,8 @@
   font-size: 3rem;  
 }
 
-
 .contenedorInfo{
-background-color: rgb(233, 233, 233);
+background-color: #AD907A;
 padding: 20px 10%;
 margin: 0px;
 }
@@ -71,10 +73,20 @@ margin: 0px;
   
 }
 .cuadrados{
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   background-color: white;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+.cuadrados p{
+  margin-top: 8px;
+  font-weight: bold;
 }
 
 
@@ -85,11 +97,15 @@ margin: 0px;
   align-items: center;
   flex-direction: column;
   padding: 20%;
+  
 }
 .texto1{
   margin-bottom: 15px;
   text-align: center;
+  color: white;
 }
+.texto2{
+  color: white;}
 .imagenes{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -103,7 +119,7 @@ margin: 0px;
 }
 .contenedorGrupo2{
   display: flex;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px 30px 20px;
 }
 .grupo1, .grupo2, .grupo3{
   position: relative;
@@ -116,7 +132,7 @@ margin: 0px;
   top: 20%;
   left: 23%;
   font-size: 25px;
-  color: rgb(46, 46, 46);  
+  color: white;  
 }
 .descripcionImg{
   display: none;
@@ -125,7 +141,7 @@ margin: 0px;
   top: 30%;
   left: 10%;
   font-size: 18px;
-  color: rgb(46, 46, 46); 
+  color: white;   
 }
 .grupo1:hover > .tituloImg{
   display: block;
@@ -152,7 +168,7 @@ margin: 0px;
   top: 20%;
   left: 23%;
   font-size: 25px;
-  color: rgb(46, 46, 46);  
+  color: white;  
 }
 .descripcionImg2{
   display: none;
@@ -161,7 +177,7 @@ margin: 0px;
   top: 30%;
   left: 10%;
   font-size: 18px;
-  color: rgb(46, 46, 46); 
+  color: white;  
 }
 .grupo2:hover > .tituloImg2{
   display: block;
@@ -176,4 +192,37 @@ margin: 0px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 }
 
+/*Seccion perfil*/
 
+.contenedorPerfil{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 0px 20%;
+  background-color: #7a97ad
+}
+.contenedorFoto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+.fotoPerfil{
+  width: 400px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+.textoPerfil{
+  text-align:left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: aliceblue;
+}
+.textoPerfil h2{
+  margin-bottom: 15px;
+  color: aliceblue;
+}

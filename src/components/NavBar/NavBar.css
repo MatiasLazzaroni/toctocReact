@@ -2,9 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color:#000000;
-    
-    
+    background-color:#121212;    
     padding: 10px;
 }
 
@@ -18,12 +16,17 @@ nav ul li{
     color: whitesmoke;
     padding-left: 40px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-
-.logoToc{
+.icono{
+    width: 40px;
+    height: 40px;
+}
+.toctoc{
     display: flex;    
     margin-left: 0px;
+    
 
 }
 

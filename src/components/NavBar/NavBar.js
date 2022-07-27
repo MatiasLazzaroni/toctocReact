@@ -8,7 +8,8 @@ const NavBar = () => {
     return (
         <div className='menu'>
             <div className='logoToc'>
-                <img src= './images/logoToctocNavBar.svg' alt='logoTocNavBar'></img>
+            <img className='icono' src={require('../../images/logoToc.png')} alt='Icono'></img>
+                <img className='toctoc' src= './images/logoToctocNavBar.svg' alt='logoTocNavBar'></img>
             </div>
                 
             <nav>      
